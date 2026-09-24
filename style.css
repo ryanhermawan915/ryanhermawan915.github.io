@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #ededed;
+    overflow-x: hidden;
+    background: #081B29;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    justify-content: space-between;
+    background: #051129;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 60px; /* sesuaikan tinggi navbar */
+    margin-bottom: 60px; /* spasi antar section */
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #091B2A;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 70px 10% 0;
+    width: 100%;
+}
+
+.home-col {
+    max-width: 600px;
+}
+
+.home-col h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-col h3 span {
+    color: #0ef;
+}
+
+.home-col h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-col h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-col p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-col1 img {
+    width: 250px;
+    max-width: 400px;         /* batas maksimum lebar */
+    height: 250px;             /* tinggi menyesuaikan proporsi */
+    border-radius: 50%;       /* agar tetap bulat */
+    object-fit: cover;        /* mencegah gambar gepeng */
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.3); /* efek glow */
+    margin-left: 70px; /* 👉 geser ke kanan 50px */
+    object-position: 50% 20%;
+    transition: all 1.2 ease-out;
+}
+
+
+.home-col1 {
+    width: 50%;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    transition: .5s ease;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081B29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081B29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    scroll-margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 220px;
+}
+
+.about-text {
+    margin-right: 60px;
+}
+
+.about-img img {
+    width: 250px;              /* ukuran yang proporsional */
+    height: 250px;             /* sama dengan width agar bisa bulat */
+    border-radius: 50%;        /* membuat bentuk lingkaran */
+    object-fit: cover;         /* agar isi gambar tidak gepeng */
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.3); /* efek glow */
+    margin-left: 10rem;         /* geser sedikit ke kanan */
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 0px;
+}
+
+.sub-title.galery{
+    padding-top: 14rem;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.container{
+    padding: 90px;
+}
+
+.skills {
+    padding-top: 100px;
+    scroll-margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 180px;
+}
+
+.main-text p {
+    text-align: center;
+    margin-top: -50px;
+}
+
+.skill-main {
+    margin: 4rem 0rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 50px;
+    line-height: 1.5;
+    padding-bottom: 100px;
+}
+
+.skill-main h3 {
+    margin-bottom: 2rem;
+    font-size: 32px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+/* ===== STYLE UNTUK DAFTAR SKILL ===== */
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 5rem;
+}
+
+.skill-list li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #222222; /* 👈 teks terlihat jelas di atas background terang */
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #0ef;
+}
+
+.skill-list li:hover {
+    transform: translateX(8px);
+    background: #e6f9ff;
+    box-shadow: 0 6px 14px rgba(0, 255, 255, 0.25);
+    color: #0ef; /* tetap terlihat saat hover */
+}
+
+.skill-list i {
+    font-size: 28px;
+    color: #0ef;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .skill-main {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-list {
+        margin-left: 2rem;
+    }
+
+    .skill-main h3 {
+        font-size: 28px;
+    }
+}
+
+
+.bar span{
+    color: #0ef;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;   /* 👉 tengah secara horizontal */
+    align-items: center;       /* 👉 tengah secara vertikal (opsional) */
+    flex-direction: column;    /* biar isi tersusun ke bawah */
+    text-align: center;        /* teks di tengah */
+    padding: 3rem 0;           /* beri ruang atas & bawah */
+    scroll-margin-top: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contact-text h2{
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-text h2 span{
+    color: #0ef;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: rgb(228,228,228);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.contact-text p{
+    color: rgb(177,177,177);
+    font-size: 80px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-list li i{
+    display: inline-block;
+    color: #0ef;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .40s ease;
+    margin-right: 10px;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #0ef;
+}
+
+.contact-icon i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s* var(--i));
+}
+
+.contact-icon i:hover{
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 400px #0ef;
+}
+
+.contact-form form{
+    position: relative;
+}
+
+.contact-form form input,form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: #555557;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.contact-form form .send:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 35px cyan;
+}
+
+.last-text{
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
+    background: rgb(7, 85, 91);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: black;
+    background: #0ef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes glow{
+    0%{
+        background: black;
+        box-shadow: none;
+    }
+    100%{
+        background-color: #0ef;
+        box-shadow: 0 0 15px cyan;
+    }
+}
+
+

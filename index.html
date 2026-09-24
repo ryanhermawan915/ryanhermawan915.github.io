@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Halaman Profil</a>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:4">Skill</a>
+            <a href="#contact" style="--i:6">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home"> 
+        <div class="home-col">
+            <h3><span>Hello</span>, It's Me</h3>
+            <h1>Ryan Hermawan</h1>
+            <div class="home-sci">
+                <a href="https://web.facebook.com/ryan.hermawan.54379236/?locale=id_ID" style="--i:7"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/ryn.hmwn/" style="--i:8"><i class='bx bxl-instagram'></i></a>
+                <a href="http://wa.me/085700231507" style="--i:10"><i class='bx bxl-whatsapp' ></i></a>
+            </div>
+        </div>
+        <div class="home-col1">
+            <img src="assets/my_photo.jpg">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/logo_uty_baru.png">
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4>Calon Web Developer</h4>
+            <p>Saya adalah Mahasiswa Prodi Informatika semester 3 dari Universitas Teknologi Yogyakarta. Saya sangat bersemangat untuk belajar membuat aplikasi web interaktif dan responsif. Saya memiliki minat besar dalam desain muka antarpengguna (UI/UX) serta pengembangan front-end menggunakan HTML, CSS, dan JavaScript</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+    <h1 class="sub-title">My <span>Skills</span></h1>
+    <div class="skill-main">
+        <!-- ===== TECHNICAL SKILLS ===== -->
+        <div class="skill-left">
+            <h3>Technical Skills</h3>
+            <ul class="skill-list">
+                <li><i style="color: #CC4828" class='bx bxl-html5'></i> HTML</li>
+                <li><i style="color: #147bbc" class='bx bxl-css3'></i> CSS</li>
+                <li><i style="color: #FFCA28" class='bx bxl-javascript'></i> JavaScript</li>
+                <li><i style="color: #3776AB" class='bx bxl-python'></i> Python</li>
+                <li><i style="color: #000000" class='bx bxl-flask'></i> Flask</li>
+                <li><i style="color: #00618A" class='bx bxs-data'></i> MySQL</li>
+            </ul>
+        </div>
+
+        <!-- ===== PROFESSIONAL SKILLS ===== -->
+        <div class="skill-right">
+            <h3>Professional Skills</h3>
+            <ul class="skill-list">
+                <li>Team Work</li>
+                <li>Creativity</li>
+                <li>Project Management</li>
+                <li>Communication</li>
+            </ul>
+        </div>
+    </div>
+</section>         
+
+   <section id="contact" class="contact">
+    <div class="contact-text">
+        <h2>Contact <span>Me</span></h2>
+        <h4>Let's work Together</h4>
+        <div class="contact-icon">
+            <a href="https://web.facebook.com/ryan.hermawan.54379236/?locale=id_ID"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/ryn.hmwn/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://mailto:ryan47634@gmail.com"><i class='bx bxl-gmail'></i></a>
+            <a href="http://wa.me/085700231507" style="--i:10"><i class='bx bxl-whatsapp' ></i></a>
+        </div>
+
+    </div>
+
+    </section>
+    <div class="last-text">
+        <p>@2025 <i style='color:#00eeff'></i> Ryan Hermawan</p>
+    </div>
+    
+    <a href="#" class="top"><i class='bx bxs-chevrons-up'></i></a>
+</body>
+
+<style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+      margin: 0 17rem;
+      
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      border-radius: 20rem;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;    
+      object-fit: cover;
+    }
+  </style>
+</html>
